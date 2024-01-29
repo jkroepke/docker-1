@@ -84,6 +84,10 @@ The ``startup.sh`` script allows some customization on startup:
   * ``CORS_ALLOW_CREDENTIALS`` (default ``false``) **Setting this to ``true`` will only have the desired effect if ``CORS_ALLOWED_ORIGINS`` defines explicit origins (not ``*``)**
 * ``PROXY_BASE_URL`` to the base URL of the GeoServer web app if GeoServer is behind a proxy. Example: ``https://example.com/geoserver``.
 
+For advanced customization of the `web.xml`, you can provide your own customized ``web.xml``
+file to Apache Tomcat by mounting it to the container at ``/opt/config_overrides/web.xml``.
+Please note that in this case ``CORS_ENABLED`` and ``CORS_ALLOWED_*`` has no effect.
+
 Example installing wps and ysld extensions:
 
 ```shell
